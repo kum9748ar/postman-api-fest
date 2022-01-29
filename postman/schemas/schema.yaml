@@ -1,0 +1,195 @@
+openapi: 3.0.0
+info:
+  version: 'v1.0'
+  title: 'Inventory-Manager'
+servers:
+  - url: 'localhost:3000'
+paths:
+  /products:
+    get:
+      summary: 'Lists all the product in Inventory'
+      operationId: listProducts
+      tags:
+        - Product
+      responses:
+        '200':
+          description: 'List of all the products'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/productList'
+    post:
+      summary: 'Adds a product'
+      operationId: addProduct
+      tags:
+        - Product
+      requestBody:
+        required: true
+        description: Product
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/product"        
+      responses:
+        '201':
+          description: 'Product added'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/product'
+  /products/{id}:
+    get:
+      summary: 'Get id specific product'
+      operationId: getProduct
+      tags:
+        - Product
+      parameters:
+        - name: id
+          in: path
+          description: ID of the product
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'Shows the specific product asked for'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/product'
+    put:
+      summary: 'Update a specific product'
+      operationId: updateProduct
+      tags:
+        - Product
+      requestBody:
+        required: true
+        description: Product
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/product"
+      parameters:
+        - name: id
+          in: path
+          description: ID of the product
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'Returns the new updated data'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/product'
+    delete:
+      summary: 'Deletes a specific product'
+      operationId: deleteProduct
+      tags:
+        - Product
+      parameters:
+        - name: id
+          in: path
+          description: ID of the product
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'Product Deleted'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/product'
+  /orders:
+    get:
+      summary: 'Shows list of the orders placed'
+      operationId: getOrders
+      tags:
+        - Product
+      parameters:
+        - name: id
+          in: query
+          description: ID of the product
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'List of orders'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ordersList'   
+  /orders/{id}:
+    post:
+      summary: 'Entry of the order'
+      operationId: entryOrder
+      tags:
+        - Product
+      parameters:
+        - name: id
+          in: path
+          description: ID of the product
+          required: true
+          schema:
+            type: string
+        - name: quantity
+          in: query
+          description: quantity of the product bought
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'Adding a order'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/orders'
+         
+components:
+  schemas:
+    productList:
+      type: array
+      items:
+        $ref: "#/components/schemas/product"
+    ordersList:
+      type: array
+      items:
+        $ref: "#/components/schemas/orders"
+    orders:
+      type: object
+      required:
+        - orderId
+        - product
+      properties:
+        orderId:
+          type: string
+        product:
+            type: object
+            $ref: "#/components/schemas/product"  
+    product:
+      type: object
+      required:
+        - id
+        - name
+        - price
+        - quantity
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        price:
+          type: integer
+          format: int32
+        quantity:
+          type: integer
+          format: int32
+
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+security:
+  - BasicAuth: []

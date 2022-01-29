@@ -1,0 +1,614 @@
+{
+    "info": {
+        "_postman_id": "df9d044c-0e2a-4fcd-9e91-2737a82c0fb0",
+        "name": "Inventory-Manager",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "products",
+            "item": [
+                {
+                    "name": "{id}",
+                    "item": [
+                        {
+                            "name": "Get id specific product",
+                            "id": "70738de5-8ae1-428a-ad2d-f0d61a4df04b",
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/products/:id",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "products",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "id": "93e717ca-240b-4666-855e-ca0c6d0cc9cd",
+                                            "key": "id",
+                                            "value": "Duis",
+                                            "type": "any",
+                                            "description": "(Required) ID of the product"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "50559575-b46d-44be-b408-3898dec96d79",
+                                    "name": "Shows the specific product asked for",
+                                    "originalRequest": {
+                                        "method": "GET",
+                                        "header": [
+                                            {
+                                                "description": "Added as a part of security scheme: basic",
+                                                "key": "Authorization",
+                                                "value": "Basic <credentials>"
+                                            }
+                                        ],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/products/:id",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "products",
+                                                ":id"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id",
+                                                    "value": "Duis",
+                                                    "description": "(Required) ID of the product"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "Text",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n \"id\": \"Lorem in\",\n \"name\": \"qui ad\",\n \"price\": -27556655,\n \"quantity\": -6192606\n}"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "id": "93e717ca-240b-4666-855e-ca0c6d0cc9cd",
+                                    "key": "id",
+                                    "value": "Duis",
+                                    "type": "any",
+                                    "description": "(Required) ID of the product"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Update a specific product",
+                            "id": "e2f73af4-9ee3-457c-8c5c-0b6f1ff6d5b4",
+                            "request": {
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/products/:id",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "products",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "id": "98af2a52-435f-45d2-8c3e-da767223bdad",
+                                            "key": "id",
+                                            "value": "Duis",
+                                            "type": "any",
+                                            "description": "(Required) ID of the product"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "89563859-01e0-4910-ac9c-1f5ad719072b",
+                                    "name": "Returns the new updated data",
+                                    "originalRequest": {
+                                        "method": "PUT",
+                                        "header": [
+                                            {
+                                                "description": "Added as a part of security scheme: basic",
+                                                "key": "Authorization",
+                                                "value": "Basic <credentials>"
+                                            }
+                                        ],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n    \"id\": \"Lorem in\",\n    \"name\": \"qui ad\",\n    \"price\": -27556655,\n    \"quantity\": -6192606\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            }
+                                        },
+                                        "url": {
+                                            "raw": "{{baseUrl}}/products/:id",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "products",
+                                                ":id"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id",
+                                                    "value": "Duis",
+                                                    "description": "(Required) ID of the product"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "Text",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n \"id\": \"Lorem in\",\n \"name\": \"qui ad\",\n \"price\": -27556655,\n \"quantity\": -6192606\n}"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "id": "98af2a52-435f-45d2-8c3e-da767223bdad",
+                                    "key": "id",
+                                    "value": "Duis",
+                                    "type": "any",
+                                    "description": "(Required) ID of the product"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Deletes a specific product",
+                            "id": "8ce77625-9c65-457e-9f64-b579cd1661ff",
+                            "request": {
+                                "method": "DELETE",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/products/:id",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "products",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "id": "d3991783-f70c-45e5-8cb9-e2a15723bb08",
+                                            "key": "id",
+                                            "value": "Duis",
+                                            "type": "any",
+                                            "description": "(Required) ID of the product"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "cf002f50-fd32-4f37-af4b-22493d2f79ac",
+                                    "name": "Product Deleted",
+                                    "originalRequest": {
+                                        "method": "DELETE",
+                                        "header": [
+                                            {
+                                                "description": "Added as a part of security scheme: basic",
+                                                "key": "Authorization",
+                                                "value": "Basic <credentials>"
+                                            }
+                                        ],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/products/:id",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "products",
+                                                ":id"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id",
+                                                    "value": "Duis",
+                                                    "description": "(Required) ID of the product"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "Text",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n \"id\": \"Lorem in\",\n \"name\": \"qui ad\",\n \"price\": -27556655,\n \"quantity\": -6192606\n}"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "id": "d3991783-f70c-45e5-8cb9-e2a15723bb08",
+                                    "key": "id",
+                                    "value": "Duis",
+                                    "type": "any",
+                                    "description": "(Required) ID of the product"
+                                }
+                            ]
+                        }
+                    ],
+                    "id": "9cec7f81-dee6-4818-8199-f618d4489a08"
+                },
+                {
+                    "name": "Lists all the product in Inventory",
+                    "id": "086d8b78-67e6-4bea-9819-325db41890ff",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/products",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "products"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "b0c62c48-3bec-4eb4-84d9-6b86316a9df5",
+                            "name": "List of all the products",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/products",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "products"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "Text",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "[\n {\n  \"id\": \"non do dolor\",\n  \"name\": \"laboris dolor nulla commodo nisi\",\n  \"price\": 65472158,\n  \"quantity\": 96092966\n },\n {\n  \"id\": \"nostrud Duis ipsum\",\n  \"name\": \"culpa incidi\",\n  \"price\": 29354633,\n  \"quantity\": 47586482\n }\n]"
+                        }
+                    ]
+                },
+                {
+                    "name": "Adds a product",
+                    "id": "a18050a1-6e85-44ca-8ef4-6122e6e8ab81",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"id\": \"Lorem in\",\n    \"name\": \"qui ad\",\n    \"price\": -27556655,\n    \"quantity\": -6192606\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/products",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "products"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "c4ce7dfd-015a-4fbf-8a29-754cdf849358",
+                            "name": "Product added",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"id\": \"Lorem in\",\n    \"name\": \"qui ad\",\n    \"price\": -27556655,\n    \"quantity\": -6192606\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{baseUrl}}/products",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "products"
+                                    ]
+                                }
+                            },
+                            "status": "Created",
+                            "code": 201,
+                            "_postman_previewlanguage": "Text",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n \"id\": \"Lorem in\",\n \"name\": \"qui ad\",\n \"price\": -27556655,\n \"quantity\": -6192606\n}"
+                        }
+                    ]
+                }
+            ],
+            "id": "f8e571cf-d3b2-4403-ba32-b757690d4b36"
+        },
+        {
+            "name": "orders",
+            "item": [
+                {
+                    "name": "Shows list of the orders placed",
+                    "id": "a2743f6f-c50b-45fd-932a-ebb89b31effe",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/orders",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "orders"
+                            ],
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "Duis",
+                                    "description": "ID of the product",
+                                    "disabled": true
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "515667cc-fe78-46d7-8b16-f05fb05adb3a",
+                            "name": "List of orders",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/orders?id=Duis",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "orders"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "id",
+                                            "value": "Duis"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "Text",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "[\n {\n  \"orderId\": \"velit laborum laboris in\",\n  \"product\": {\n   \"id\": \"Lorem amet consequat\",\n   \"name\": \"ut commodo ex\",\n   \"price\": 46952367,\n   \"quantity\": -92659647\n  }\n },\n {\n  \"orderId\": \"ipsum\",\n  \"product\": {\n   \"id\": \"in\",\n   \"name\": \"cillum adipisicing quis commodo\",\n   \"price\": -15750974,\n   \"quantity\": 25823393\n  }\n }\n]"
+                        }
+                    ]
+                },
+                {
+                    "name": "Entry of the order",
+                    "id": "25fb38c8-c71a-4cd4-bb4e-9f18d0a8876a",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/orders/:id?quantity=Duis",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "orders",
+                                ":id"
+                            ],
+                            "query": [
+                                {
+                                    "description": "quantity of the product bought",
+                                    "key": "quantity",
+                                    "value": "Duis"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "Duis",
+                                    "description": "(Required) ID of the product"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "dbb1a920-96d8-4d05-80a9-704dece33fa3",
+                            "name": "Adding a order",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/orders/:id?quantity=Duis",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "orders",
+                                        ":id"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "quantity",
+                                            "value": "Duis"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "id",
+                                            "value": "Duis",
+                                            "description": "(Required) ID of the product"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "Text",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n \"orderId\": \"consequat do ad aute veniam\",\n \"product\": {\n  \"id\": \"consequat aliqua laboris\",\n  \"name\": \"do officia\",\n  \"price\": -20841551,\n  \"quantity\": -3642982\n }\n}"
+                        }
+                    ]
+                }
+            ],
+            "id": "e8b1e382-c46a-41a9-8c25-97b9fcc598be"
+        }
+    ],
+    "auth": {
+        "type": "basic",
+        "basic": [
+            {
+                "key": "username",
+                "value": "<Basic Auth Username>",
+                "type": "string"
+            },
+            {
+                "key": "password",
+                "value": "<Basic Auth Password>",
+                "type": "string"
+            }
+        ]
+    },
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "id": "ffcb9993-40bc-4590-a39b-62928dc0264a",
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "id": "7fd16721-6d95-4a53-b539-f2336f4ab0bf",
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        }
+    ],
+    "variable": [
+        {
+            "id": "cfa6e292-6cc9-4955-8a51-38423ff175fb",
+            "key": "baseUrl",
+            "value": "localhost:3000",
+            "type": "string"
+        }
+    ]
+}
